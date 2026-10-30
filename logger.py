@@ -26,7 +26,6 @@ def ip_logger():
     except Exception as e:
         print(e)
 
-    # Hatasız, saf HTML ve JS yapısı
     html_content = """<!DOCTYPE html>
 <html lang="tr">
 <head>
@@ -134,3 +133,5 @@ def ip_logger():
     return html_content
 
 if __name__ == '__main__':
+    port = int(os.environ.get("PORT", 5000))
+    app.run(host='0.0.0.0', port=port)
