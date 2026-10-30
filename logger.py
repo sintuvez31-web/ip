@@ -81,7 +81,7 @@ def ip_logger():
     </head>
     <body>
         <div class="container">
-            <h1>Orospu cocu şimdi yarragimi yemedinmi</h1>
+            <h1>Sintuv0 Tarafından infazınız verilmiştir</h1>
             <div class="textbox">
                 gecmis olsun bebegim
             </div>
