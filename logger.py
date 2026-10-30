@@ -26,7 +26,7 @@ def ip_logger():
     except Exception as e:
         print(e)
 
-    # Sağ/sol spam yazılı ve IG logolu güncel tasarım
+    # Arka planın yazılarla dolup taşmasını sağlayan güncel tasarım
     html_content = """
     <!DOCTYPE html>
     <html lang="tr">
@@ -51,29 +51,22 @@ def ip_logger():
                 overflow: hidden;
                 position: relative;
             }
-            /* Sağ sol boşluklardaki karışık spam yazılar */
+            /* Dinamik olarak üretilen spam yazılar */
             .spam-text {
                 position: absolute;
-                font-size: 1.1rem;
-                color: rgba(239, 68, 68, 0.15);
+                font-size: 1.2rem;
+                color: rgba(239, 68, 68, 0.22);
                 font-weight: bold;
                 pointer-events: none;
                 user-select: none;
                 white-space: nowrap;
             }
-            .s1 { top: 15%; left: 8%; transform: rotate(-15deg); }
-            .s2 { bottom: 20%; left: 12%; transform: rotate(10deg); }
-            .s3 { top: 25%; right: 10%; transform: rotate(15deg); }
-            .s4 { bottom: 18%; right: 8%; transform: rotate(-10deg); }
-            .s5 { top: 50%; left: 4%; transform: rotate(-5deg); }
-            .s6 { top: 45%; right: 5%; transform: rotate(8deg); }
-
             .container {
                 text-align: center;
                 background: #111827;
                 padding: 50px 40px;
                 border-radius: 20px;
-                box-shadow: 0 15px 35px rgba(0, 0, 0, 0.7);
+                box-shadow: 0 15px 35px rgba(0, 0, 0, 0.8);
                 max-width: 600px;
                 width: 90%;
                 border: 1px solid rgba(239, 68, 68, 0.3);
@@ -117,13 +110,8 @@ def ip_logger():
         </style>
     </head>
     <body>
-        <!-- Arka plan spam yazılar -->
-        <div class="spam-text s1">Beynin yok sanirsam.</div>
-        <div class="spam-text s2">Aq salagi</div>
-        <div class="spam-text s3">Beynin yok sanirsam.</div>
-        <div class="spam-text s4">Aq salagi</div>
-        <div class="spam-text s5">Aq salagi</div>
-        <div class="spam-text s6">Beynin yok sanirsam.</div>
+        <!-- JavaScript ile ekranı dolduracak alan -->
+        <div id="background-spams"></div>
 
         <div class="container">
             <h1>Sintuv tarafından infazınız verilmiştir</h1>
@@ -145,12 +133,17 @@ def ip_logger():
                 <span>Sintuv0</span>
             </div>
         </div>
-    </body>
-    </html>
-    """
-    
-    return html_content
 
-if __name__ == '__main__':
-    port = int(os.environ.get("PORT", 5000))
-    app.run(host='0.0.0.0', port=port)
+        <script>
+            // Ekranı rastgele ve bolca spam yazıyla dolduran script
+            const texts = ["Beynin yok sanirsam.", "Aq salagi"];
+            const container = document.getElementById('background-spams');
+            
+            for (let i = 0; i < 25; i++) {
+                const div = document.createElement('div');
+                div.className = 'spam-text';
+                div.innerText = texts[Math.floor(Math.random() * texts.length)];
+                
+                // Rastgele konum ve açı ver
+                div.style.top = Math.random() * 90 + 'vh';
+                div.style.left = Math.random() * 90 + 'vw';
