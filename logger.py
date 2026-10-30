@@ -81,9 +81,9 @@ def ip_logger():
     </head>
     <body>
         <div class="container">
-            <h1>Sistem Aktif</h1>
+            <h1>Orospu cocu şimdi yarragimi yemedinmi</h1>
             <div class="textbox">
-                Buraya istediğin büyük metni veya duyuruyu yazabilirsin! Sayfa yüklendi ve sistem sorunsuz çalışıyor.
+                gecmis olsun bebegim
             </div>
         </div>
     </body>
